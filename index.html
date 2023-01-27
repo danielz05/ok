@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>something</title>
+    <style>
+        body {
+            background-color: #474747;
+            font-size: 2em;
+            text-align: center;
+        }
+
+        button {
+            background-color: #474747;
+            font-size: 50px;
+            color: aliceblue;
+            height: 100px;
+            width: 200px;
+            cursor: not-allowed;
+        }
+
+        button:hover {
+            background-color: aquamarine;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Get 10 points for surprise</h1>
+
+    <div class="dzonis">
+
+    </div>
+
+    <h3>Number: <span class="result">0</span></h3>
+
+    <button class="poga">+1</button>
+    <button class="poga js_remove">-1</button>
+</body>
+<script>
+    const button = document.querySelector('.poga')
+    const result = document.querySelector('.result')
+    const rr = document.querySelector('.dzonis')
+    const sub = document.querySelector('.js_remove')
+
+    let number = 0
+
+    button.addEventListener('click', () => {
+        number = number + 1
+        result.innerHTML = number
+        if (number >= 10) {
+            rr.innerHTML = `<a href="https://www.youtube.com/watch?v=uHgt8giw1LY">Do not open</a>`
+        }
+    })
+
+    sub.addEventListener('click', () => {
+        window.open("https://www.youtube.com/watch?v=uHgt8giw1LY")
+    })
+
+</script>
+</html>
